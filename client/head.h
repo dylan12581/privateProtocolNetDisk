@@ -16,6 +16,14 @@ enum{
     GETS = 300,
     GETS_SYNC = 301,
 };
+typedef struct {
+    char path[1000];
+    char token[1024];
+    char fileName[1024];
+    char ip[100];
+    char port[100];
+    int flag;//上传文件，下载文件
+}PutsData;
 // 客户端传输协议格式
 typedef struct client_protocol_s{
     int command_flag;
